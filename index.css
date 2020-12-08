@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Megrim&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
 /* reset styling */
 html,
 body,
@@ -70,10 +72,10 @@ td {
 }
 
 /* UNIVERSAL STYLING */
+
 body {
   font-family: "Titillium Web";
   max-width: 1000px;
-  min-width: 770px;
   margin: 50px auto 10px auto;
   padding: 0 30px;
 }
@@ -113,10 +115,10 @@ a {
 }
 
 ul {
-  /* set list styling */
+  /* remove list styling */
   list-style: none;
 
-  margin: 0 3% 0 3%;
+  margin: 0 1% 0 3%;
   padding: 0;
 
   display: flex;
@@ -124,7 +126,9 @@ ul {
   flex-flow: column wrap;
 }
 
+/* bullet point styling */
 ul li p::before {
+  /* Arial, because Titanitum Web has square bullets */
   font-family: "Arial";
   /* Unicode for solid circle bullet */
   content: "\2022";
@@ -132,6 +136,12 @@ ul li p::before {
   color: #007ca5;
 
   margin-right: 1em;
+}
+
+/* different bullets for nested list */
+.nestedList p::before {
+  /* Unicode for circle outline bullets */
+  content: "\25E6";
 }
 
 .line {
@@ -160,10 +170,6 @@ ul li p::before {
 }
 
 #header ul {
-  /* no bullets or list styling */
-  margin: 0;
-  padding: 0;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -196,8 +202,8 @@ ul li p::before {
 /* SKILLS */
 
 #skills ul {
-  /* have to hard code the height to force a wrap after 4th item */
-  height: 110px;
+  /* have to hard code the height to form 6 even columns */
+  height: 120px;
 
   /* makes it a bit more centered horizontally*/
   margin-right: -3%;
@@ -225,17 +231,6 @@ ul li p::before {
   flex-direction: column;
 }
 
-/* different bullets for nested list */
-#experience .nestedList p::before {
-  font-family: "Arial";
-  /* Unicode for circle outline bullets */
-  content: "\25E6";
-  font-weight: 700;
-  color: #007ca5;
-
-  margin-right: 1em;
-}
-
 /* LEGAL */
 
 #legal {
@@ -243,4 +238,43 @@ ul li p::before {
   text-align: center;
 
   padding-top: 50px;
+}
+
+/* TABLET AND SMALL DESKTOP */
+
+@media only screen and (max-width: 850px) {
+  #skills ul {
+    /* have to hard code the height to form 3 even columns */
+    /* slightly off on small desktop on chrome/safari, but  */
+    /* looks perfect firefox/chrome/safari on iphone 12mini and iphone 7+ */
+    height: 230px;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 680px) {
+  /* make name smaller */
+  h1 {
+    font-size: 55pt;
+    line-height: 50pt;
+  }
+
+  /* put dates under title and left-align */
+  .inlineDates {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /*  move contact info below name */
+  #header {
+    flex-direction: column;
+  }
+
+  #skills ul {
+    /* have to hard code the height to form 2 even columns */
+    /* slightly off on small desktop on chrome/safari, but  */
+    /* looks perfect firefox/chrome/safari on iphone 12mini and iphone 7+ */
+    height: 334px;
+  }
 }
