@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Megrim&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 /* reset styling */
 html,
 body,
@@ -81,18 +80,11 @@ body {
 
 /* name */
 h1 {
-  /* for Creepster */
-  font-family: "Creepster";
-  font-size: 80pt;
-  line-height: 70pt;
+  font-family: "Megrim";
+  font-size: 75pt;
+  line-height: 65pt;
 
-  /* for Titillium Web */
-  /* font-size: 50pt;
-  line-height: 50pt; */
-
-  font-weight: 700;
-
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
 }
 
 /* section headers */
