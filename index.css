@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+/* reset styling */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* UNIVERSAL STYLING */
+body {
+  font-family: "Titillium Web";
+  max-width: 1000px;
+  min-width: 770px;
+  margin: 50px auto 10px auto;
+  padding: 0 30px;
+}
+
+/* name */
+h1 {
+  /* for Creepster */
+  font-family: "Creepster";
+  font-size: 80pt;
+  line-height: 70pt;
+
+  /* for Titillium Web */
+  /* font-size: 50pt;
+  line-height: 50pt; */
+
+  font-weight: 700;
+
+  margin: 0 0 20px 0;
+}
+
+/* section headers */
+h2 {
+  font-size: 20pt;
+  font-weight: 600;
+
+  margin: 0px 0;
+}
+
+/* job titles and schools */
+h3 {
+  color: #303030;
+  font-weight: 600;
+  font-size: 16pt;
+}
+
+p {
+  color: #303030;
+}
+
+/* emphasized text and links color */
+span,
+a {
+  color: #007ca5;
+}
+
+ul {
+  /* set list styling */
+  list-style: none;
+
+  margin: 0 3% 0 3%;
+  padding: 0;
+
+  display: flex;
+  /* set direction to columns and wrap for skills */
+  flex-flow: column wrap;
+}
+
+ul li p::before {
+  font-family: "Arial";
+  /* Unicode for solid circle bullet */
+  content: "\2022";
+  font-weight: 700;
+  color: #007ca5;
+
+  margin-right: 1em;
+}
+
+.line {
+  /* create line with css */
+  border-top: 1px solid grey;
+  width: 100%;
+
+  margin: 10px 0;
+
+  align-self: center;
+}
+
+.inlineDates {
+  /* line up h3 titles/schools with p dates */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* HEADER */
+
+#header {
+  /* name on left; contact info on right */
+  display: flex;
+  justify-content: space-between;
+}
+
+#header ul {
+  /* no bullets or list styling */
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#header ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header ul li img {
+  /* seperates p from icons */
+  margin-left: 10px;
+
+  align-self: center;
+}
+#header ul li p {
+  /* make slightly bigger than rest of p text */
+  font-size: 13pt;
+
+  /* keeps p and img on same line */
+  flex-shrink: 0;
+}
+
+#header ul li p::before {
+  /* no bullets */
+  content: "";
+}
+
+/* SKILLS */
+
+#skills ul {
+  /* have to hard code the height to force a wrap after 4th item */
+  height: 110px;
+
+  /* makes it a bit more centered horizontally*/
+  margin-right: -3%;
+}
+/* ONLY WORKS IN FIREFOX */
+/* set skills to wrap after every 4th one */
+/* #skills ul li:nth-child(4n) {
+  break-after: always;
+} */
+
+#skills ul li p {
+  /* add a little extra space vertically between skills */
+  margin: 1% 0;
+}
+
+/* EXPERIENCE */
+
+#experience ul li {
+  /* prevent text from wrapping underneath the bullet */
+  text-indent: -1.4em;
+  /* keep bullets aligned with skills bullets */
+  margin-left: 1.4em;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* different bullets for nested list */
+#experience .nestedList p::before {
+  font-family: "Arial";
+  /* Unicode for circle outline bullets */
+  content: "\25E6";
+  font-weight: 700;
+  color: #007ca5;
+
+  margin-right: 1em;
+}
+
+/* LEGAL */
+
+#legal {
+  font-size: 8pt;
+  text-align: center;
+
+  padding-top: 50px;
+}
