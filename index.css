@@ -114,6 +114,10 @@ a {
   color: #007ca5;
 }
 
+a:focus {
+  outline: #303030 1pt dotted;
+}
+
 ul {
   /* remove list styling */
   list-style: none;
