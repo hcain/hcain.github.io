@@ -206,8 +206,8 @@ ul li p::before {
 /* SKILLS */
 
 #skills ul {
-  /* have to hard code the height to form 6 even columns */
-  height: 120px;
+  /* have to hard code the height to form 5 even columns */
+  height: 100px;
 
   /* makes it a bit more centered horizontally*/
   margin-right: -3%;
