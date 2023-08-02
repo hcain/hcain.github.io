@@ -213,8 +213,8 @@ ul li p::before {
   margin-right: -3%;
 }
 /* ONLY WORKS IN FIREFOX */
-/* set skills to wrap after every 4th one */
-/* #skills ul li:nth-child(4n) {
+/* set skills to wrap after every 3rd one */
+/* #skills ul li:nth-child(3n) {
   break-after: always;
 } */
 
@@ -251,7 +251,7 @@ ul li p::before {
     /* have to hard code the height to form 3 even columns */
     /* slightly off on small desktop on chrome/safari, but  */
     /* looks perfect firefox/chrome/safari on iphone 12mini and iphone 7+ */
-    height: 230px;
+    height: 183px;
   }
 }
 
@@ -279,6 +279,6 @@ ul li p::before {
     /* have to hard code the height to form 2 even columns */
     /* slightly off on small desktop on chrome/safari, but  */
     /* looks perfect firefox/chrome/safari on iphone 12mini and iphone 7+ */
-    height: 334px;
+    height: 245px;
   }
 }
