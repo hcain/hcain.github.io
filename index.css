@@ -279,6 +279,6 @@ ul li p::before {
     /* have to hard code the height to form 2 even columns */
     /* slightly off on small desktop on chrome/safari, but  */
     /* looks perfect firefox/chrome/safari on iphone 12mini and iphone 7+ */
-    height: 245px;
+    height: 250px;
   }
 }
